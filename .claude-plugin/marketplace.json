@@ -1,0 +1,23 @@
+{
+  "name": "tool-permission-matrix",
+  "owner": {
+    "name": "Wanbinyu",
+    "url": "https://github.com/Wanbinyu"
+  },
+  "metadata": {
+    "description": "Build a permission and blast-radius matrix for agent tools. Use when deciding which tools an agent may call, least privilege, or Chinese \"\u5de5\u5177\u6743\u9650\", \"\u7206\u70b8\u534a\u5f84\", \"\u6700\u5c0f\u6743\u9650\", \"tool \u767d\u540d\u5355\". Defensive product contro...",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "tool-permission-matrix",
+      "source": "./",
+      "version": "0.1.0",
+      "description": "Build a permission and blast-radius matrix for agent tools. Use when deciding which tools an agent may call, least privilege, or Chinese \"\u5de5\u5177\u6743\u9650\", \"\u7206\u70b8\u534a\u5f84\", \"\u6700\u5c0f\u6743\u9650\", \"tool \u767d\u540d\u5355\". Defensive product contro...",
+      "keywords": [
+        "agent-skills",
+        "tool-permission-matrix"
+      ]
+    }
+  ]
+}
