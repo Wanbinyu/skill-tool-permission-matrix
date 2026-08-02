@@ -2,20 +2,14 @@
 
 **English** | [中文](README.zh-CN.md)
 
-<p align="center">
-  <strong>Standalone Agent Skill</strong> · <code>tool-permission-matrix</code>
-</p>
-
-<p align="center">
-  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="MIT" /></a>
-  <a href="https://github.com/agentskills/agentskills"><img src="https://img.shields.io/badge/format-Agent%20Skills-111827" alt="Agent Skills" /></a>
-</p>
-
-Build a permission and blast-radius matrix for agent tools. Use when deciding which tools an agent may call, least privilege, or Chinese "工具权限", "爆炸半径", "最小权限", "tool 白名单". Defensive product control - not penetration testing.
+<p align="center"><strong>One skill. Install in 30 seconds. Use in Claude / Codex / Cursor.</strong></p>
+<p align="center"><code>tool-permission-matrix</code> · MIT · Agent Skills format</p>
 
 ---
 
-## Install (Claude Code)
+## Start here
+
+### Install
 
 ```powershell
 git clone https://github.com/Wanbinyu/skill-tool-permission-matrix.git
@@ -26,57 +20,40 @@ cd skill-tool-permission-matrix
 ```bash
 git clone https://github.com/Wanbinyu/skill-tool-permission-matrix.git
 cd skill-tool-permission-matrix
-chmod +x scripts/install.sh
-./scripts/install.sh --claude
+chmod +x scripts/install.sh && ./scripts/install.sh --claude
 ```
 
-Claude skill id remains **`tool-permission-matrix`** (no `skill-` prefix):
+→ `~/.claude/skills/tool-permission-matrix/` · **Restart Claude Code**
 
-`~/.claude/skills/tool-permission-matrix/`
+### Then say (examples)
 
-Restart Claude Code after install.
+- *Use the `tool-permission-matrix` skill on my current change.*
+- Or any phrase matching the triggers in `SKILL.md` frontmatter (EN + ZH).
+
+---
+
+## What this skill is for
+
+Build a permission and blast-radius matrix for agent tools. Use when deciding which tools an agent may call, least privilege, or Chinese "工具权限", "爆炸半径", "最小权限", "tool 白名单". Defensive product control - not penetration testing.
+
+Full workflow (steps, exit criteria, report template): **[`SKILL.md`](SKILL.md)**
+
+> Human docs: EN + [中文](README.zh-CN.md).  
+> `SKILL.md` body is English so agents execute consistently.
+
+---
+
+## One skill = one project
+
+- This repo: **only** `tool-permission-matrix`
+- Bulk packs: [ai-surface-skills](https://github.com/Wanbinyu/ai-surface-skills)
+- All solo skills: https://github.com/Wanbinyu?tab=repositories&q=skill-
 
 ### Plugin
 
 ```text
 /plugin marketplace add Wanbinyu/skill-tool-permission-matrix
 /plugin install tool-permission-matrix@tool-permission-matrix
-/reload-plugins
-```
-
----
-
-## What this skill does
-
-See [`SKILL.md`](SKILL.md) (same as `skills/tool-permission-matrix/SKILL.md`).
-
-The YAML `description` at the top of `SKILL.md` holds triggers (often EN + ZH).
-
-> **Note:** `SKILL.md` body is English so agents follow instructions reliably.  
-> Human docs are bilingual: this file + [`README.zh-CN.md`](README.zh-CN.md).
-
----
-
-## One skill = one project
-
-This repo ships **only this skill**.  
-Bulk install of related skills:
-
-- Collection: [ai-surface-skills](https://github.com/Wanbinyu/ai-surface-skills)
-- Catalog: [`CATALOG.md`](../CATALOG.md) / [`CATALOG.zh-CN.md`](../CATALOG.zh-CN.md) (local `G:\\skill\\solo`)
-
----
-
-## Layout
-
-```text
-skill-tool-permission-matrix/   (GitHub)  or  solo/tool-permission-matrix/  (local)
-  README.md              # English
-  README.zh-CN.md        # Chinese
-  SKILL.md
-  skills/tool-permission-matrix/SKILL.md
-  scripts/install.ps1
-  .claude-plugin/
 ```
 
 ## License
